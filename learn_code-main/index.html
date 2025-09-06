@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearn - [By Fahri V1.5]</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>CodeLearn </></span>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-target="home"><i class="fas fa-home"></i> Home</button>
+                <button class="nav-btn" data-target="courses"><i class="fas fa-book"></i> Kursus</button>
+                <button class="nav-btn" data-target="practice"><i class="fas fa-laptop-code"></i> Praktik</button>
+                <button class="nav-btn" data-target="profile"><i class="fas fa-user"></i> Profil</button>
+            </nav>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="app-main">
+            <!-- Home Section -->
+            <section class="content-section active" id="home">
+                <div class="hero">
+                    <h1>Belajar Koding dengan Cara Menyenangkan [Scroll Pesbuk Aja]</h1>
+                    <p>Tingkatkan kemampuan coding anda dengan belajar, bukannya belajar malah scroll jir.</p>
+                    <button class="cta-btn" id="start-learning-btn">Mulai Disini Wok</button>
+                </div>
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Struktur Jelas</h3>
+                        <p>Materi yang disusun dari dasar hingga mahir, kalo struktur lu gajelas mending mati aja, bikin mual gw aseli</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Cepat Paham</h3>
+                        <p>Penjelasan sederhana dengan contoh nyata, tanpa omon-omon</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Proyek Nyata</h3>
+                        <p>Bangun portofolio sendiri sambil belajar, bukan proyek abal abal mirip esemka</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section class="content-section" id="courses">
+                <h2 class="section-title">Pilih Kursus</h2>
+                <div class="course-grid" id="course-grid">
+                    <!-- Courses will be loaded via JS -->
+                </div>
+            </section>
+
+            <!-- Practice Section -->
+            <section class="content-section" id="practice">
+                <div class="code-editor-container">
+                    <div class="editor-header">
+                        <div class="language-selector">
+                            <select id="language-select">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">JavaScript</option>
+                                <option value="python">Python</option>
+                            </select>
+                        </div>
+                        <button class="run-btn" id="run-code-btn"><i class="fas fa-play"></i> Jalankan</button>
+                    </div>
+                    <div class="editor-area">
+                        <textarea id="code-editor" spellcheck="false"></textarea>
+                        <div class="line-numbers"></div>
+                    </div>
+                    <div class="output-area">
+                        <iframe id="output-frame"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Section -->
+            <section class="content-section" id="profile">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h2>Profil Pengguna</h2>
+                    </div>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <label>Nama:</label>
+                            <span id="profile-name">Player</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Level:</label>
+                            <span id="profile-level">Pemula</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Poin:</label>
+                            <span id="profile-points">0</span>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 25%;"></div>
+                    </div>
+                    <button class="login-btn" id="login-btn">Masuk / Daftar</button>
+                </div>
+            </section>
+
+            <!-- Course Detail Section -->
+            <section class="content-section" id="course-detail">
+                <div class="back-btn" id="back-to-courses">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Kursus
+                </div>
+                <div class="course-detail-container">
+                    <div class="course-detail-header">
+                        <div class="course-icon" id="detail-course-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h2 id="detail-course-title">HTML Dasar</h2>
+                        <div class="course-meta">
+                            <span><i class="fas fa-book-open"></i> <span id="detail-lesson-count">12</span> Pelajaran</span>
+                            <span><i class="fas fa-clock"></i> <span id="detail-duration">4 jam</span></span>
+                        </div>
+                    </div>
+                    <div class="course-description" id="detail-course-description">
+                        Pelajari dasar-dasar HTML untuk membangun struktur website.
+                    </div>
+                    <div class="lessons-list" id="lessons-list">
+                        <!-- Lessons will be loaded via JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2025 CodeLearn [Fahri]. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100087759317001"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/dashboard"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/tfhri_?igsh=d2RyODh2Y3cwM2pm"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
